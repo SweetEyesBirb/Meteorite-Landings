@@ -1,0 +1,50 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+*/
+
+body {
+    background-color: #0d0021;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5%;
+}
+
+#title-top {
+    color: aliceblue;
+
+}
+
+#map {
+    height: 90vh;
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    background-color: aliceblue;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5%;
+    color: aliceblue;
+}
+
+a {
+    color: aliceblue;
+}
