@@ -1,18 +1,10 @@
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     position: relative;
 }
-
-/* main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-*/
 
 body {
     background-color: #0d0021;
@@ -26,7 +18,6 @@ header {
 
 #title-top {
     color: aliceblue;
-
 }
 
 #map {
