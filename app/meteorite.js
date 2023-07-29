@@ -2,16 +2,45 @@ function main() {
 
   let map;
 
-  async function printData() {
-    const response = await fetch("https://data.nasa.gov/resource/gh4g-9sfh.json"); // ../data/meteorites.json
-    const data = await response.json();
+  async function fetchDataFromAPI() {
+    const baseUrl = 'https://data.nasa.gov/resource/gh4g-9sfh.json';
+    const perPage = 1000;
+    let currentPage = 1;
+    let allData = [];
+
+    // Fetch data for each page until there is no more data
+    while (true) {
+      const url = `${baseUrl}?$limit=${perPage}&$offset=${(currentPage - 1) * perPage}`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (data.length === 0) {
+          // No more data, break out of the loop
+          break;
+        }
+
+        // Concatenate the data from this page with the previous data
+        allData = allData.concat(data);
+
+        currentPage++;
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        break;
+      }
+    }
+
+    console.log(allData);
+
+    // Process the entire data here
 
     async function initMap() {
       // The location of Uluru
       const positionStart = { lat: -25.344, lng: 131.031 };
 
       const { Map } = await google.maps.importLibrary("maps");
-      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+      // const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
       map = new Map(document.getElementById("map"), {
         center: positionStart,
@@ -22,7 +51,8 @@ function main() {
 
       // from here
 
-      data.forEach(landing => {
+      allData.forEach(landing => {
+        if (landing.geolocation && landing.geolocation.latitude && landing.geolocation.longitude) {
 
         var lat = parseFloat(landing.geolocation.latitude);
         var lng = parseFloat(landing.geolocation.longitude);
@@ -41,7 +71,8 @@ function main() {
         });
 
         function addMarker(coords) {
-          const marker = new AdvancedMarkerElement({
+          // const marker = new AdvancedMarkerElement({
+            const marker = new google.maps.Marker({
             map: map,
             position: coords,
             title:
@@ -59,7 +90,7 @@ Rec-Class: ${landing.recclass}`,
             });
           });
         }
-
+      }
         // till here
       })
 
@@ -68,63 +99,8 @@ Rec-Class: ${landing.recclass}`,
     window.initMap = initMap;
   }
 
-  printData();
+  fetchDataFromAPI();
 
 }
 
  main();
-
-
-
-/* fetch("https://data.nasa.gov/resource/gh4g-9sfh.json")
-  .then(response => response.json())
-  .then(data => {
-      console.log(data.lenght);
-  })
-  */
-
-
-// How to fetch all the data
-
-/* async function fetchDataFromAPI() {
-const baseUrl = 'https://data.nasa.gov/resource/gh4g-9sfh.json';
-const perPage = 1000;
-let currentPage = 1;
-let allData = [];
- 
-// Fetch data for each page until there is no more data
-while (true) {
-const url = `${baseUrl}?$limit=${perPage}&$offset=${(currentPage - 1) * perPage}`;
- 
-try {
-const response = await fetch(url);
-const data = await response.json();
- 
-if (data.length === 0) {
-  // No more data, break out of the loop
-  break;
-}
- 
-// Concatenate the data from this page with the previous data
-allData = allData.concat(data);
- 
-currentPage++;
-} catch (error) {
-console.error('Error fetching data:', error);
-break;
-}
-}
-
- 
-console.log('Total fetched data length:', allData.length);
-
-// Process the entire data here
- 
-
-
- 
-}
- 
-fetchDataFromAPI();
-
-*/
