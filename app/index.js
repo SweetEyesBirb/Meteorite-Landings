@@ -35,11 +35,15 @@ function main() {
   
       map = L.map("map").setView(positionStart, 3);
   
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 20,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
   
       const markers = L.markerClusterGroup();
   
       try {
+        // Gets the returned data from the fetch API
         const allData = await fetchDataFromAPI();
   
         allData.forEach(landing => {
@@ -51,8 +55,8 @@ function main() {
             const marker = L.marker(coords);
   
             marker.bindPopup(`<h2>Name: ${landing.name}</h2>
-              <h3>Mass: ${parseInt(landing.mass) / 1000} Kg</h3>
-              <h3>Fell in year: ${landing.year}</h3>
+              <h3>Mass: ${landing.mass ? parseInt(landing.mass) / 1000 : "No Data"} Kg</h3>
+              <h3>${landing.fall} in year: ${landing.year ? landing.year : "Unknown"}</h3>
               <h3>Coordinates: Lat: ${coords.lat} Lng: ${coords.lng}</h3>
               <h3>Rec-Class: ${landing.recclass}</h3>`);
   
