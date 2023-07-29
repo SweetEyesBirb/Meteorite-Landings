@@ -31,7 +31,7 @@ function main() {
     }
   
     async function initMap() {
-      const positionStart = { lat: -25.344, lng: 131.031 };
+      const positionStart = { lat: 45, lng: 13 };
   
       map = L.map("map").setView(positionStart, 3);
   
