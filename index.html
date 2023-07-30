@@ -15,12 +15,15 @@
     <script defer src="https://unpkg.com/leaflet.markercluster@1.5.0/dist/leaflet.markercluster.js"></script>
     <script defer src="app/index.js"></script>
     <title>Meteorite Landings Map</title>
-    <meta name="description" content="Explore the fascinating world of meteorites with this interactive map that shows the locations, dates, names and sizes of meteorite landings around the world fell or found across the globe from 861 AD to 2013. Learn about the origin, composition, and impact of these cosmic rocks that have fallen to Earth. ">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <meta name="description" content="Explore the fascinating world of meteorites with this interactive map that shows the locations, dates, names and sizes of meteorite landings around the world fell or found from 861 AD to 2013. Learn about the origin, composition, and impact of these cosmic rocks that have fallen to Earth.">
     <meta name=”robots” content="index, follow">
 </head>
 
 <body>
     <main role="main">
+        <div id="main-container">
 
         <header>
             <h1 id="title-top" role="heading">Meteorite Landings Map</h1>
@@ -28,19 +31,20 @@
                 the map</h2>
         </header>
 
-        <div id="map-container">
+        
             <div id="map">
                 <div id="attribution"><a href="https://leafletjs.com/" target="_blank">Leaflet</a>
                     <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap</a>
                 </div>
             </div>
-        </div>
+        
 
         <footer class="footer" aria-label="Footer" role="contentinfo">
             <p>Data source <a href="https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh"
                     target="_blank">data.nasa.gov</a>
             </p>
         </footer>
+    </div>
 
     </main>
 </body>

@@ -26,9 +26,10 @@ header h2 {
     margin-top: 2em;
     font-size: 1.1rem;
     font-weight: lighter;
+    text-align: center;
 }
 
-#map-container {
+#main-container {
     width: 90%;
     margin: 0 auto;
 }
