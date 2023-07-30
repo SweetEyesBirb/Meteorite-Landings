@@ -76,5 +76,5 @@ function main() {
     window.initMap = initMap;
   }
   
- // main();
+main();
 
