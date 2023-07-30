@@ -12,19 +12,28 @@ body {
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-top: 2.5%;
+    align-items: center;
 }
 
 #title-top {
     color: aliceblue;
 }
 
+header h2 {
+    color: aliceblue;
+    margin-top: 2em;
+    font-size: 1.1rem;
+    font-weight: lighter;
+}
+
 #map {
     height: 90vh;
     width: 100%;
     border-radius: 20px;
-    margin-top: 2.5%;
+    margin-top: 0.2%;
     margin-bottom: 2.5%;
     background-color: aliceblue;
 }
