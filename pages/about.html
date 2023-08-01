@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Meteorite Landings Map Project</title>
+
+    <meta name="description"
+        content="Meteorite landings map is a small project from a first year Computer Science student aiming at practicing to fetch JSON data from a dataset and its consequent manipulation.">
+    <meta name="keywords" content="meteorite landings, fallen meteorites, meteorite data">
+    <!-- does noy cause problems -->
+
+    <link rel="stylesheet" href="../styles/about.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+</head>
+
+<body>
+    <main>
+        <div id="main-container">
+            <div id="intro">
+                <h1 id="title-top">The Project</h1>
+                <p>Meteorite landings map is a small project from a first year Computer Science student aiming at
+                    practicing to fetch JSON data from a dataset and its consequent manipulation.</p>
+            </div>
+            <div id="description">
+                <h2>How does it work?</h2>
+                <p>The data is fetched from the NASA dataset API and displayed on the map powered by Leaflet JS. The
+                    clustering is made possible via Leaflet.markercluster, a Leaflet JS plugin.</p>
+                    <p>Zoom in the map to a location to break the clusers, click on a marker to explore the fascinating world of meteorites with this interactive map that shows the locations, dates, names and sizes of meteorite landings around the world fell or found from 861 AD to 2013. Learn about the origin, composition, and impact of these cosmic rocks that have fallen to Earth.</p>
+
+                <h2>The Data</h2>
+                <p>There are around 45700 entries, but only around 39500 are displayed on the map. This is because about
+                    6200 objects have no coordinates, therefore they would be grouped in one single point. Trying to
+                    open this large cluster could cause the page to stop working, therefore, I have decided to omit the
+                    data of these objects.
+                    <br><br>In Antartica, three big clusters on the same coordinates respectively can be found. 1505 meteorite fragments belong to Asuka, 4761 to Yamato and 3040 to Queen Alexandra Range. Opening these clusters may take some time.
+                </p>
+
+                <h2>How do I recognise a meteorite?</h2>
+                <p><a href="https://www.usgs.gov/faqs/i-think-i-found-meteorite-how-can-i-tell-sure"
+                        target="_blank">This guide</a> from the United States government can help identifying meteorites
+                    from other rocks. The government guide was created with the information found in the <a
+                        href="http://meteorite.unm.edu/meteorites/meteorite-museum/how-id-meteorite/"
+                        target="_blank">Meteorite Museum</a> from the University of New Mexico.</p>
+            </div>
+        </div>
+
+        <footer class="footer" aria-label="Footer">
+            <div id="footer-content">
+                <ul>
+                    <li>
+                        <a href="../index.html">Home | Map</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+</html>

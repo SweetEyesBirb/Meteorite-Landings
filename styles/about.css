@@ -1,0 +1,34 @@
+@import url(style.css);
+
+* {
+    color: aliceblue;
+}
+
+#main-container {
+    min-height: 90vh;
+}
+
+p {
+    margin-top: 1.6em;
+    font-size: 1.1em;
+    border-left: solid;
+    border-right: solid;
+    padding: 0.7em;
+    line-height: 1.2em;
+}
+
+#intro {
+    margin: 4.5em auto 3em auto;
+    height: fit-content;
+}
+
+#intro h1 {
+    border-top: solid;
+    border-bottom: solid;
+}
+
+#description p {
+    margin-top: 1em;
+    margin-bottom: 3.5em;
+    font-size: 1.025rem;
+}
