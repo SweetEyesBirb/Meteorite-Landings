@@ -37,10 +37,55 @@
 
             <header>
                 <h1 id="title-top">Meteorite Landings Map</h1>
-                <h2>Please allow some time for approximately 39500 objects to be processed and rendered on
+                <h2>Please allow some time for approximately 32000 objects to be processed and rendered on
                     the map</h2>
             </header>
 
+            <form class="form">
+                <div id="fields-wrapper">
+
+                    <div id="mass-low-label-wrap" class="label-wrap">
+                        <label for="mass-low">Lower mass value (Kg):</label>
+
+                        <div id="mass-low-input-wrap" class="input-wrap">
+                            <input id="mass-low" type="number" name="mass-low" placeholder="0.001g" step="0.0001"
+                                min="0" max="60000" />
+                        </div>
+                    </div>
+
+                    <div id="mass-high-label-wrap" class="label-wrap">
+                        <label for="mass-high">Higher mass value (Kg):</label>
+
+                        <div id="mass-high-input-wrap" class="input-wrap">
+                            <input id="mass-high" type="number" name="mass-high" placeholder="60000Kg" step="0.0001"
+                                min="0.0001" max="60000" />
+                        </div>
+                    </div>
+
+                    <div id="year-from-label-wrap" class="label-wrap">
+                        <label for="year-from">From Year:</label>
+
+                        <div id="year-from-input-wrap" class="input-wrap">
+                            <input id="year-from" type="number" name="year-from" placeholder="860" step="1" min="860"
+                                max="2013" />
+                        </div>
+                    </div>
+
+                    <div id="year-to-label-wrap" class="label-wrap">
+                        <label for="year-to">To Year:</label>
+
+                        <div id="year-to-input-wrap" class="input-wrap">
+                            <input id="year-to" type="number" name="year-to" placeholder="2013" step="1" min="860"
+                                max="2013" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="submit-wrap">
+                    <input type="submit" id="submit" />
+                </div>
+            </form>
 
             <div id="map">
                 <div id="attribution"><a href="https://leafletjs.com/" target="_blank">Leaflet</a>
@@ -59,7 +104,7 @@
             <div id="footer-content">
                 <ul>
                     <li>
-                        <a href="pages/about.html">About</a>
+                        <a href="pages/about">About</a>
                     </li>
                 </ul>
             </div>
