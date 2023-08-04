@@ -10,7 +10,7 @@
 
 p {
     margin-top: 1.6em;
-    font-size: 1.1em;
+    font-size: 1.5em;
     border-left: solid;
     border-right: solid;
     padding: 0.7em;
@@ -22,13 +22,18 @@ p {
     height: fit-content;
 }
 
-#intro h1 {
+#title-top {
     border-top: solid;
     border-bottom: solid;
+    font-size: 2..3em;
+}
+
+h2 {
+    font-size: 1.7em;
 }
 
 #description p {
     margin-top: 1em;
     margin-bottom: 3.5em;
-    font-size: 1.025rem;
+    font-size: 1.3rem;
 }

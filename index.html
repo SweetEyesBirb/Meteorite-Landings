@@ -32,60 +32,62 @@
 </head>
 
 <body>
-    <main>
-        <div id="main-container">
 
-            <header>
-                <h1 id="title-top">Meteorite Landings Map</h1>
-                <h2>Please allow some time for approximately 32000 objects to be processed and rendered on
-                    the map</h2>
-            </header>
+    <div id="main-container">
 
-            <form class="form">
-                <div id="fields-wrapper">
+        <header>
+            <h1 id="title-top">Meteorite Landings Map</h1>
+            <h2>Please allow some time for approximately 32000 objects to be processed and rendered on
+                the map</h2>
+        </header>
 
-                    <div id="mass-low-label-wrap" class="label-wrap">
-                        <label for="mass-low">Lower mass value (Kg):</label>
+        <form class="form">
+            <div id="fields-wrapper">
 
-                        <div id="mass-low-input-wrap" class="input-wrap">
-                            <input id="mass-low" type="number" name="mass-low" placeholder="0.001g" step="0.0001"
-                                min="0" max="60000" />
-                        </div>
+                <div id="mass-low-label-wrap" class="label-wrap">
+                    <label for="mass-low">Lower mass value (Kg):</label>
+
+                    <div id="mass-low-input-wrap" class="input-wrap">
+                        <input id="mass-low" type="number" name="mass-low" placeholder="0.001Kg" step="0.0001" min="0"
+                            max="60000">
                     </div>
-
-                    <div id="mass-high-label-wrap" class="label-wrap">
-                        <label for="mass-high">Higher mass value (Kg):</label>
-
-                        <div id="mass-high-input-wrap" class="input-wrap">
-                            <input id="mass-high" type="number" name="mass-high" placeholder="60000Kg" step="0.0001"
-                                min="0.0001" max="60000" />
-                        </div>
-                    </div>
-
-                    <div id="year-from-label-wrap" class="label-wrap">
-                        <label for="year-from">From Year:</label>
-
-                        <div id="year-from-input-wrap" class="input-wrap">
-                            <input id="year-from" type="number" name="year-from" placeholder="860" step="1" min="860"
-                                max="2013" />
-                        </div>
-                    </div>
-
-                    <div id="year-to-label-wrap" class="label-wrap">
-                        <label for="year-to">To Year:</label>
-
-                        <div id="year-to-input-wrap" class="input-wrap">
-                            <input id="year-to" type="number" name="year-to" placeholder="2013" step="1" min="860"
-                                max="2013" />
-                        </div>
-                    </div>
-
                 </div>
 
-                <div id="submit-wrap">
-                    <input type="submit" id="submit" />
+                <div id="mass-high-label-wrap" class="label-wrap">
+                    <label for="mass-high">Higher mass value (Kg):</label>
+
+                    <div id="mass-high-input-wrap" class="input-wrap">
+                        <input id="mass-high" type="number" name="mass-high" placeholder="60000Kg" step="0.0001"
+                            min="0.0001" max="60000">
+                    </div>
                 </div>
-            </form>
+
+                <div id="year-from-label-wrap" class="label-wrap">
+                    <label for="year-from">From Year:</label>
+
+                    <div id="year-from-input-wrap" class="input-wrap">
+                        <input id="year-from" type="number" name="year-from" placeholder="860" step="1" min="860"
+                            max="2013">
+                    </div>
+                </div>
+
+                <div id="year-to-label-wrap" class="label-wrap">
+                    <label for="year-to">To Year:</label>
+
+                    <div id="year-to-input-wrap" class="input-wrap">
+                        <input id="year-to" type="number" name="year-to" placeholder="2013" step="1" min="860"
+                            max="2013">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="submit-wrap">
+                <input type="submit" id="submit">
+            </div>
+        </form>
+
+        <main>
 
             <div id="map">
                 <div id="attribution"><a href="https://leafletjs.com/" target="_blank">Leaflet</a>
@@ -93,24 +95,41 @@
                 </div>
             </div>
 
+            <div id="advert">
+                <p>Use the filters at the top of the page to display only the desired meteorites.</p>
+                <p>Zoom in a location or click on a cluster bubble to break the clusters.</p>
+                <p>
+                    Click on a marker to explore the fascinating world of
+                    meteorites with this interactive map that shows the locations, dates, names and sizes of meteorite
+                    landings around the world fell or found from 861 AD to 2013. Learn about the origin, composition,
+                    and impact of these cosmic rocks that have fallen to Earth.
+                </p>
+
+            </div>
+
             <div id="data-source">
                 <p>Data source <a href="https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh"
                         target="_blank">data.nasa.gov</a>
                 </p>
             </div>
+
+        </main>
+
+    </div>
+
+
+
+    <footer class="footer" aria-label="Footer">
+        <div id="footer-content">
+            <ul>
+                <li>
+                    <a href="pages/about">About</a>
+                </li>
+            </ul>
         </div>
+    </footer>
 
-        <footer class="footer" aria-label="Footer">
-            <div id="footer-content">
-                <ul>
-                    <li>
-                        <a href="pages/about">About</a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
 
-    </main>
 </body>
 
 </html>

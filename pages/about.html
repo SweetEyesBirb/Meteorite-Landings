@@ -13,8 +13,8 @@
     <!-- does noy cause problems -->
 
     <link rel="stylesheet" href="../styles/about.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
 
 </head>
 
@@ -30,15 +30,18 @@
                 <h2>How does it work?</h2>
                 <p>The data is fetched from the NASA dataset API and displayed on the map powered by Leaflet JS. The
                     clustering is made possible via Leaflet.markercluster, a Leaflet JS plugin.</p>
-                    <p>Zoom in the map to a location to break the clusers, click on a marker to explore the fascinating world of meteorites with this interactive map that shows the locations, dates, names and sizes of meteorite landings around the world fell or found from 861 AD to 2013. Learn about the origin, composition, and impact of these cosmic rocks that have fallen to Earth.</p>
 
                 <h2>The Data</h2>
                 <p>There are around 45700 entries, but only around 32000 are displayed on the map. This is because about
                     6200 objects have no coordinates, therefore they would be grouped in one single point. Trying to
                     open this large cluster could cause the page to stop working, therefore, I have decided to omit the
                     data of these objects.
-                    <br><br>In Antartica, three big clusters on the same coordinates respectively can be found. 1505 meteorite fragments belong to Asuka, 4761 to Yamato and 3040 to Queen Alexandra Range. Opening these clusters may take some time.
-                    <br><br>So where are the 6000 missing meteorites? Likely there are some keys missing in the endpoint which are causing the data to remain hidden, but it may not be it. Nevetheless, I am working to bring the wondering objects to the map.
+                    <br><br>In Antartica, three big clusters on the same coordinates respectively can be found. 1505
+                    meteorite fragments belong to Asuka, 4761 to Yamato and 3040 to Queen Alexandra Range. Opening these
+                    clusters may take some time.
+                    <br><br>So where are the 6000 missing meteorites? Likely there are some keys missing in the endpoint
+                    which are causing the data to remain hidden, but it may not be it. Nevetheless, I am working to
+                    bring the wondering objects to the map.
                 </p>
 
                 <h2>How do I recognise a meteorite?</h2>
@@ -47,6 +50,23 @@
                     from other rocks. The government guide was created with the information found in the <a
                         href="http://meteorite.unm.edu/meteorites/meteorite-museum/how-id-meteorite/"
                         target="_blank">Meteorite Museum</a> from the University of New Mexico.</p>
+
+                <h2>Want to know more about meteorites?</h2>
+                <p>Have a look at <a href="https://www.researchgate.net/publication/326053427_Meteorite_Landings"
+                        target="_blank">this research paper</a> that analyzes and correlates the data contained in the
+                    dataset that was also used for the map.
+                    <br>It is also worth checking the <a href="https://meteoritical.org/" target="_blank">Meteoritical
+                        Society website.</a>
+                </p>
+
+                <h2>What is the difference between meteorites, meteors, meteoroids and asteroids?</h2>
+                <p>Well, in a nutshell, meteorites are rocks that fell on Earth (or any planet or moon) and are now
+                    found on its surface.<br>A meteor is the short passage of a space rock through the atmosphere. It
+                    becomes visible due to the intense heath originated from the friction between the object and the air
+                    molecules.<br>Meteoroids are just tiny asteroids up to a meter in diameter.<br>And comets? Comets
+                    are celestial objects that contain frozen water and gasses. They are different than asteroids as the
+                    latter composition is mainly rocky or metallic. Hence, this is why the tail is not a feature of
+                    asteroids.</p>
             </div>
         </div>
 

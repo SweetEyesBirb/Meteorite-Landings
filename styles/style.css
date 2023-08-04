@@ -19,6 +19,10 @@ a {
     color: aliceblue;
 }
 
+p {
+    color: aliceblue;
+}
+
 li {
     list-style-type: none;
     margin-bottom: 0.5rem;
@@ -37,11 +41,12 @@ header {
     color: aliceblue;
     text-align: center;
     margin-bottom: 1.5em;
+    font-size: 2.5em;
 }
 
 header h2 {
     color: aliceblue;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: lighter;
     text-align: center;
 }
@@ -95,6 +100,12 @@ input[type=submit] {
     color: #0d0021;
 }
 
+#submit:active {
+    background-color: hsla(175, 80%, 60%, .9);
+    box-shadow: 0 5px hsla(175, 80%, 20%, .9);
+    transform: translateY(4px);
+}
+
 /*map*/
 #map {
     height: 90vh;
@@ -116,11 +127,24 @@ input[type=submit] {
     color: #0d0021;
 }
 
+/* text after map */
+
+#advert {
+    margin: 3em 0;
+}
+
+#advert p {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    margin-bottom: 1.5em;
+}
+
 #data-source {
     display: flex;
     justify-content: center;
     margin-bottom: 2.5%;
     color: aliceblue;
+    font-size: 1.2em;
 }
 
 /* footer */
@@ -144,4 +168,5 @@ li a {
     font-weight: lighter;
     border-left: solid;
     padding-left: 0.7em;
+    font-size: 1.1em;
 }
