@@ -1,7 +1,7 @@
 @import url(style.css);
 
 * {
-    color: aliceblue;
+    color: var(--text-color);
 }
 
 #main-container {

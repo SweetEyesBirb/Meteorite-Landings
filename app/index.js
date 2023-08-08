@@ -188,7 +188,7 @@ function main() {
     submitBtn.disabled = true;
     setTimeout(function() {
         submitBtn.disabled = false;
-    }, 3000);
+    }, 2000);
 
     // console.log(lowerMassValue, higherMassValue, yearFrom, yearTo)
     filterMap(lowerMassValue, higherMassValue, yearFrom, yearTo);

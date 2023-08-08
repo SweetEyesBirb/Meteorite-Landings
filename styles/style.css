@@ -1,3 +1,10 @@
+
+:root {
+    --background-color: #0d0021;
+    --text-color: aliceblue;
+    --hover-bg: hsla(175, 80%, 60%, .9);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +14,7 @@
 
 /* general */
 body {
-    background-color: #0d0021;
+    background-color: var(--background-color);
 }
 
 #main-container {
@@ -16,11 +23,11 @@ body {
 }
 
 a {
-    color: aliceblue;
+    color: var(--text-color);
 }
 
 p {
-    color: aliceblue;
+    color: var(--text-color);
 }
 
 li {
@@ -38,14 +45,14 @@ header {
 }
 
 #title-top {
-    color: aliceblue;
+    color: var(--text-color);
     text-align: center;
     margin-bottom: 1.5em;
     font-size: 2.5em;
 }
 
 header h2 {
-    color: aliceblue;
+    color: var(--text-color);
     font-size: 1.2rem;
     font-weight: lighter;
     text-align: center;
@@ -65,7 +72,7 @@ form {
 }
 
 label {
-    color: aliceblue;
+    color: var(--text-color);
     font: 1em sans-serif;
 }
 
@@ -84,8 +91,8 @@ input[type=number] {
 }
 
 input[type=submit] {
-    color: aliceblue;
-    background-color: #0d0021;
+    color: var(--text-color);
+    background-color: var(--background-color);
     font-size: 1.2em;
     border: none;
 }
@@ -96,17 +103,17 @@ input[type=submit] {
 }
 
 #submit:hover {
-    background-color: hsla(175, 80%, 60%, .9);
-    color: #0d0021;
+    background-color: var(--hover-bg);
+    color: var(--background-color);
 }
 
 #submit:active {
-    background-color: hsla(175, 80%, 60%, .9);
+    background-color: var(--hover-bg);
     box-shadow: 0 5px hsla(175, 80%, 20%, .9);
     transform: translateY(4px);
 }
 
-#submit:disabled {
+#submit:disabled:hover {
     background-color: rgba(211, 211, 211, 0.9);
 }
 
@@ -147,7 +154,7 @@ input[type=submit] {
     display: flex;
     justify-content: center;
     margin-bottom: 2.5%;
-    color: aliceblue;
+    color: var(--text-color);
     font-size: 1.2em;
 }
 
@@ -156,7 +163,7 @@ footer {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 2.5%;
-    color: aliceblue;
+    color: var(--text-color);
     border-top: solid;
 }
 
@@ -173,4 +180,22 @@ li a {
     border-left: solid;
     padding-left: 0.7em;
     font-size: 1.1em;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: aliceblue;
+        --text-color: #0d0021;
+        --hover-bg: hsla(175, 80%, 60%, .9);
+    }
+
+    input[type=number] {
+        background-color: var(--text-color);
+        color: var(--background-color);
+    }
+
+    #submit:hover {
+        background-color: var(--text-color);
+        color: var(--background-color);
+    }
 }
