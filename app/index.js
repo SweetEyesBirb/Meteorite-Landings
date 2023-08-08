@@ -192,9 +192,6 @@ function main() {
 
     // console.log(lowerMassValue, higherMassValue, yearFrom, yearTo)
     filterMap(lowerMassValue, higherMassValue, yearFrom, yearTo);
-
-
-
   });
 
   initMap();
