@@ -19,7 +19,7 @@ After this point, only small HTML and CSS additions have been added and pushed i
 ## Info
 The website displays all the meteorite landings from the NASA dataset at https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh.
 
-- **Due to the large number of objects (around 45000), the markers on the page may take a while to spawn, usually between 10 to 40 seconds depending on the processing power of the device.**
+- **Due to the large number of objects (around 45000), the markers on the page may take a while to spawn, usually between 10 to 40 seconds depending on the processing power of the device and connection speed.**
 - A very large cluster at {lat: 0, lng: 0} (South West of Nigeria), a collection of all the objects with no coordinates (6000+) has been removed as opening this cluster may cause the page to stop responding.
 
 ## Attributions and resources
